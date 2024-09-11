@@ -1,3 +1,4 @@
+#Pedro Souza, Setting & Resetting
 import math
 facultyAndStaff = 32
 studentsAwarded = 100
