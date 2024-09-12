@@ -1,3 +1,4 @@
+#Pedro Souza, Madlib
 sentient1 = input("Give me a random creature or sentient thing: ")
 sentient2 = input("Give me another random creature or sentient thing: ")
 sentient3 = input("Give me another random creature or sentient thing: ")
