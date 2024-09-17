@@ -4,7 +4,7 @@ question1 = int(input("Infinite bacon but no games(1), or games, infinite games,
 question2 = int(input("Where is paris? France(1) not France(2): "))
 question3 = int(input("Where is waldo? France(1), on the book(2): "))
 question4 = int(input("Im blue. Badabi badaba(1), I'm a smurf(2): "))
-question5 = int(input("Only in North Dakota(1), Ohio(2): "))
+question5 = int(input("Only in. North Dakota(1), Ohio(2): "))
 
 if question1 == 1:
     score += 1
