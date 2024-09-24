@@ -1,9 +1,4 @@
-#Pedro Souza, anagram creator.
+#Pedro Souza, anagram creator
 import random
-name = input("Type your name: ")
-letters = list(name)
-
-for x in range(0, 5):
-    random.shuffle(letters)
-    newLetters = "".join(letters)
-    print(newLetters)
+letters = list(input("Type your name: "))
+for x in range(5):  random.shuffle(letters), print("".join(letters))
