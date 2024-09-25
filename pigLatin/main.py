@@ -1,6 +1,6 @@
 #Pedro Souza, Pig latin translator
 
-vowels = ["a", "e", "i", "o", "u"]
+vowels = ["a", "e", "i", "o", "u", "y", "w"]
 def translate(word):
     firstLetter = word[0]
     if firstLetter in vowels:
@@ -9,10 +9,14 @@ def translate(word):
         print(word)
     else:
         wordList = list(word)
-        wordList.append(firstLetter)
-        wordList.pop(0)
+        while firstLetter not in vowels:
+            wordList.append(firstLetter)
+            wordList.pop(0)
+            firstLetter = wordList[0]
+
         print("Original word:", word)
         word = "".join(wordList)
         word += "ay"
         print("Pig latin translation:", word)
-translate(input("Your word: "))
+
+translate(input("Your word (please all lowercase): "))
