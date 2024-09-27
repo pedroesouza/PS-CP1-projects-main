@@ -1,13 +1,17 @@
 #Pedro Souza, Shift cypher
 
-alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
-
+alphabet = "  abcdefghijklmnopqrstuvwxyzaABCDEFGHIJKLMNOPQRSTUVWXYZA0123456789012"
 
 def encode(word):
-    wordList = list(word)
-    alphabet.find(wordList)
-    wordList.pop(0)
-    word = "".join(wordList)
+    wordLen = len(word)
+    newWord = []
+    repeats = 0
+    for x in word:
+        letter = x
+        whereLetter = alphabet.index(letter)
+        newWord.insert(repeats, alphabet[whereLetter + 1])
+        word = "".join(newWord)
+        repeats += 1
     print(word)
 
 encode(input("What is your word: "))
