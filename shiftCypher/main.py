@@ -12,6 +12,6 @@ def encode(word):
         newWord.insert(repeats, alphabet[whereLetter + 1])
         word = "".join(newWord)
         repeats += 1
-    print(word)
+    print("encoded:",word)
 
-encode(input("What is your word: "))
+encode(input("What is your word to encode: "))
