@@ -20,7 +20,7 @@ class BankAccount: #Bank account class
         return self.balance
 
 def create_account(): #Account creator, enters account number and initial balance
-    account_number = input("Enter account number: ") #Questions
+    account_number = input("Enter account number: ") #Asks 2 questions
     initial_balance = float(input("Enter initial balance: "))
     return BankAccount(account_number, initial_balance) #Returns answers
 
