@@ -8,6 +8,6 @@ if user in authorized:
         print("Hello admin, welcome to the crappy python project that you for some reason are an admin for.")
     else:
         print("You are authorized in... well... the... whatever this is.")
-else:
+elif user not in authorized:
     print("You're not allowed, GET OUT!?!?!?!?!?! 😠🤬😠😡😠👹😠👺😠💢💢💢")
 
