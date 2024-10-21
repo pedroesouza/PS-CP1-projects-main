@@ -6,3 +6,5 @@ def add_to_list(item, my_list=[]):
      my_list.append(item)
 
      return my_list
+
+print(f"List: {add_to_list(input("What is your item?: "))}")
