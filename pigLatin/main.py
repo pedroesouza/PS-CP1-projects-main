@@ -1,6 +1,6 @@
 #Pedro Souza, Pig latin translator
 
-vowels = ["a", "e", "i", "o", "u", "y", "w"]
+vowels = ["a", "e", "i", "o", "u"]
 def translate(word):
     firstLetter = word[0]
     if firstLetter in vowels:
