@@ -10,12 +10,12 @@ status = 0
 
 pMove = ""
 
-def ask(answer):
-    if answer not in rps:
-        pMove = ask(input("r, p, or s?\n").lower())
+def ask2(answer):
+    if answer not in ["y", "n"]:
+        choice = ask2(input("\nGo again (Y/N)\n").lower())
     return answer
 
-def ask2(answer):
+def ask(answer):
     if answer not in rps:
         pMove = ask(input("r, p, or s?\n").lower())
     return answer
@@ -28,7 +28,7 @@ while True:
     pMove = ask(input("r, p, or s?\n").lower())
         
 
-    time.sleep(0.1)
+    time.sleep(0.5)
     print("\nrock...")
     time.sleep(0.5)
     print("paper...")
@@ -36,11 +36,11 @@ while True:
     print("scissors...")
     time.sleep(0.5)
     print("shoot!")
-    time.sleep(0.1)
+    time.sleep(0.5)
 
     print(f"\nYou chose:\n{pMove}")
     time.sleep(0.5)
-    print(f"\nBot chose:\n{bMove}") 
+    print(f"\nBot chose:\n{bMove}\n") 
 
     time.sleep(0.5)
     if pMove == "r":
@@ -87,7 +87,7 @@ while True:
     time.sleep(0.5)
     choice = ask2(input("\nGo again (Y/N)\n").lower())
     if choice == "y":
-        continue
+        pass
     else:
         print("Ok! Goodbye!")
         break
