@@ -1,30 +1,18 @@
-#Pedro Souza, Simple Quiz Game
+import random
+import operator
 
-#q1 = input("How long was the Seven Years' War?\n\n    A) 7 years\n    B) 8 years\n    C) 9 years\n    D) 100 years\n\n Your answer: ")
+n1 = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "45", "46", "47", "48", "49", "50"]
 
-#q2 = input("How long was was the Ten Years' war?\n\n    A) 9 years\n    B) 10 years\n    C) 15 years\n    D) 21 years\n\n Your answer: ")
+o1={
+    "+": operator.__add__,
+    "-": operator.__sub__,
+    "*": operator.__mul__,
+    "/": operator.__truediv__}
 
-#q3 = input("How long was was the Eighty Years' war?\n\n    A) 80 years\n    B) 20 years\n    C) 15 years\n    D) 21 years\n\n Your answer: ")
+p1 = random.choice(n1)
+p2 = random.choice(list(o1))
+p3 = random.choice(n1)
+q = f"{p1} {p2} {p3}"
 
-#q4 = input("How long was was the Three Hundred and Thirty Five Years' War?\n\n    A) 335 Months\n    B) 335 years\n    C) 0.5 years\n    D) 80 years\n\n Your answer: ")
-
-#q5 = input("How long was was the Hundred Years' War?\n\n    A) 100 years\n    B) 10 years\n    C) 116 years\n    D) 80 years\n\n Your answer: ")
-
-#q6 = input("6 * 8 - 10(15)?\n\n    A) 104\n    B) 80\n    C) -98\n    D) -105\n\n Your answer: ")
-
-def ask():
-    q4 = input("How long was was the Three Hundred and Thirty Five Years' War?\n\n    A) 335 Months\n    B) 335 years\n    C) 0.5 years\n    D) 80 years\n\n Your answer: ")
-    if q4 == questions["q4"]:
-        print("cool")
-
-
-questions = {
-    "q1": {"d": "easy", "a": "A"},
-    "q2": {"d": "easy", "a": "B"},
-    "q3": {"d": "easy", "a": "A"},
-    "q4": {"d": "mid", "a": "B"},
-    "q5": {"d": "hard", "a": "C"},
-    "q6": {"d": "mid", "a": "D"}
-    }
-
-ask()
+a = input(q)
+cA = int(p1), p2.value, int(p3)
