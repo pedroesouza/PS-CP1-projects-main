@@ -1,6 +1,6 @@
 import time
 
-x = 1
+x = 0
 
 def ask(answer):
     try:
@@ -12,8 +12,9 @@ def ask(answer):
     return answer
     
 y = ask(input("What is your number?:  "))
+y = int(y)
 
-while x <= int(y):
-    print(x)
-    x += 1
+while y >= x:
+    print(y)
+    y -= 1
     time.sleep(1)
