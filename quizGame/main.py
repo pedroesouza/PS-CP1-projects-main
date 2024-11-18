@@ -3,6 +3,9 @@ import operator
 
 
 a = 0
+cA = 0
+c = True
+r = "m"
 
 n1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
@@ -18,18 +21,80 @@ n3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 
 o1={
     '+': lambda p1, p3: p1 + p3, 
+    '-': lambda p1, p3: p1 - p3}
+
+o2={
+    '+': lambda p1, p3: p1 + p3, 
     '-': lambda p1, p3: p1 - p3,
     '*': lambda p1, p3: p1 * p3, 
     '/': lambda p1, p3: p1 / p3,}
 
+o3={
+    '+': lambda p1, p3: p1 + p3, 
+    '-': lambda p1, p3: p1 - p3,
+    '*': lambda p1, p3: p1 * p3, 
+    '/': lambda p1, p3: p1 / p3,
+    '**': lambda p1, p3: p1 ** p3}
 
-p1 = random.choice(n1)
-p2a, p2b = random.choice(list(o1.items()))
-p3 = random.choice(n1)
+
+def easy():
+    p1 = random.choice(n1)
+    p2a, p2b = random.choice(list(o1.items()))
+    p3 = random.choice(n1)
+
+    q = f"{p1} {p2a} {p3}"
+
+    a = ask(input(f"{q}\n"))
+    a = float(a)
+
+    cA = float(p2b(p1, p3))
+
+    if a == cA:
+        print("Correct")
+        return True
+    else:
+        print(f"Wrong, the correct answer was {cA}")
+        return False
 
 
-q = f"{p1} {p2a} {p3}"
+def medium():
+    p1 = random.choice(n2)
+    p2a, p2b = random.choice(list(o2.items()))
+    p3 = random.choice(n2)
 
+    q = f"{p1} {p2a} {p3}"
+
+    a = ask(input(f"{q}\n"))
+    a = float(a)
+
+    cA = float(p2b(p1, p3))
+
+    if a == cA:
+        print("Correct")
+        return True
+    else:
+        print(f"Wrong, the correct answer was {cA}")
+        return False
+
+
+def hard():
+    p1 = random.choice(n3)
+    p2a, p2b = random.choice(list(o3.items()))
+    p3 = random.choice(n3)
+
+    q = f"{p1} {p2a} {p3}"
+
+    a = ask(input(f"{q}\n"))
+    a = float(a)
+
+    cA = float(p2b(p1, p3))
+
+    if a == cA:
+        print("Correct")
+        return True
+    else:
+        print(f"Wrong, the correct answer was {cA}")
+        return False
 
 def ask(answer):
     try:
@@ -38,15 +103,28 @@ def ask(answer):
     except:
         ask(input(f"Invalid, try again\n{q}"))
 
-    
+c = medium()
+while True:
+    if r == "m":
+        if c == True:
+            c = hard()
+            r = "h"
+        else:
+            c == easy()
+            r = "c"
 
-a = ask(input(f"{q}\n"))
-a = float(a)
+    if r == "e":
+        if c == True:
+            c = medium()
+            r = "m"
+        if c == False:
+            c = easy()
+            r = "e"
 
-cA = float(p2b(p1, p3))
-
-
-if a == cA:
-    print("lmao ur right")
-else:
-    print(f"keep yourself safe, the correct answer was {cA}")
+    if r == "h":
+        if c == True:
+            c = hard()
+            r = "h"
+        if c == False:
+            c = easy()
+            r = "e"
