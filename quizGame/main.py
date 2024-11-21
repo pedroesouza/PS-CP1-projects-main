@@ -45,8 +45,6 @@ o3={
     '/': lambda p1, p3: p1 / p3,
     '**': lambda p1, p3: p1 ** p3}
 
-
-def everything
 def easy():
     p1 = random.choice(n1)
     p2a, p2b = random.choice(list(o1.items()))
@@ -145,3 +143,6 @@ while True:
         if c == False:
             c = easy()
             r = "e"
+    
+    input("Want to end? (Y or N): ")
+    
