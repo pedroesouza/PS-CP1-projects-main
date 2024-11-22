@@ -1,3 +1,5 @@
+#Pedro Souza, quiz game
+
 import random
 import operator
 
