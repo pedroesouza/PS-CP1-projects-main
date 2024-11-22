@@ -119,6 +119,13 @@ def ask(answer):
         ask(input(f"Invalid, try again\n{q}"))
 
 c = medium()
+q2 = input("Want to end? (Y or N): ").lower()
+if q2 == "y":
+    print("\nGoodbye!\n")
+    exit()
+else:
+    pass
+
 while True:
     if r == "m":
         if c == True:
@@ -128,6 +135,13 @@ while True:
             c == easy()
             r = "c"
 
+        q2 = input("Want to end? (Y or N): ").lower()
+        if q2 == "y":
+            print("\nGoodbye!\n")
+            exit()
+        else:
+            pass
+
     if r == "e":
         if c == True:
             c = medium()
@@ -135,6 +149,13 @@ while True:
         if c == False:
             c = easy()
             r = "e"
+
+        q2 = input("Want to end? (Y or N): ").lower()
+        if q2 == "y":
+            print("\nGoodbye!\n")
+            exit()
+        else:
+            pass
 
     if r == "h":
         if c == True:
@@ -144,6 +165,9 @@ while True:
             c = easy()
             r = "e"
     
-    q2 = input("Want to end? (Y or N): ").lower()
-    if q2 == y:
-        exit()
+        q2 = input("Want to end? (Y or N): ").lower()
+        if q2 == "y":
+            print("\nGoodbye!\n")
+            exit()
+        else:
+            pass
