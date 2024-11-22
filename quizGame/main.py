@@ -144,5 +144,6 @@ while True:
             c = easy()
             r = "e"
     
-    input("Want to end? (Y or N): ")
-    
+    q2 = input("Want to end? (Y or N): ").lower()
+    if q2 == y:
+        exit()

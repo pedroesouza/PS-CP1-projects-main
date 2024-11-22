@@ -9,7 +9,7 @@ for iAmount in range(1, amount + 1):
 print("\n")
 
 for iLength in range(0, len(numList)):
-    print(f"{iLength}: ", end = "")
+    print(f"{iLength + 1}: ", end = "")
     for iAsterisk in range(numList[iLength]):
         print("*", end = "")
     print("\n")
