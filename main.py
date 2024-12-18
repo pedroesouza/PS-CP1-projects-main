@@ -15,8 +15,6 @@ stats = {
 hasMainAreaFought = False
 hasJanitorFought = False
 
-stay = True
-
 def j_combat():
     bHP = 1
     print("You are in combat with the boss")
@@ -185,11 +183,11 @@ def hallway_1():
 def janitor_room():
     print(f"inventory: {inventory}")
     whereNext = input("Would you like to use your key to get into the janitors room (Y or N)?").lower()
-    if whereNext == "Y":
+    if whereNext == "y":
         print("You unlock the door to see a rope, which you grab, you wall back into hall 2")
         inventory.append("rope")
         hallway_2()
-    if whereNext == "N":
+    if whereNext == "n":
         print("Ok... thats kinda dumb, anyways, your back into hallway 2")
         hallway_2()
 
@@ -231,13 +229,14 @@ def laundry_room():
 
 def cafeteria():
     print("You walk into the cafeteria to a seemingly infinite amount of weak men that havent eaten in weeks, perfect time to practice fighting!")
-    while stay == True:
+    while True:
         c_combat()
-        var = input("Do you want to go back to the main area (Y or N)?")
+        var = input("Do you want to go back to the main area (Y or N)?").lower()
         if var == "y":
-            stay == False
+            break
         else:
-            stay == True
+            pass
+    main_area()
 
 def hallway_4():
     whereNext = input("\nWould you like to go to the LAUNDRY ROOM or back to HALLWAY 3?\n").lower()
